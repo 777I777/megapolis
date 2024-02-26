@@ -1,0 +1,16 @@
+import csv
+with open("vacancy.csv", encoding = 'utf8') as file:
+    s = file.readlines()
+#переносим содержимое файла в список
+
+csmin = 2929292929299292929292991
+for Salary, Work_Type, Company_Size, Role, Company in s:
+    if Company_Size < csmin:
+        csmin = Company_Size
+        mSalary = Salary
+        mWork_Type = Work_Type
+        mRole = Role
+        mCompany = Company
+if mRole == "классный руководитель":
+    print(“В компании "+Company+" есть заданная профессия: "+Role+", з/п в такой компании составит: "+Salary)
+
